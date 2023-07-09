@@ -14,6 +14,6 @@ VScode extensions :
 `cargo run -- "cp [OPTION]... [-T] SOURCE DEST"`
 
 ## Todo
-[x] First minimal working version (learn Rust strucutre, tests, ...)  
-[ ] handle more complex token (repeatable args, choice delimiter, ...)  
-[ ] add other definitions (postgreSql)  
+- [x] First minimal working version (learn Rust strucutre, tests, ...)  
+- [ ] handle more complex token (repeatable args, choice delimiter, ...)  
+- [ ] add other definitions (postgreSql)  

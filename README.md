@@ -1,6 +1,6 @@
 # Regexor
 A Regex Validator, made with Rust.  
-Convert help/man text to their regex counterpart. Use this translation to validate command-line
+Convert help/man texts into their regex counterpart. The translation is used to validate command-line inputs.
 
 ## Install
 Rust :
@@ -11,7 +11,10 @@ VScode extensions :
 - CodeLLDB
 
 ## Build & Execute
-`cargo run -- "cp [OPTION]... [-T] SOURCE DEST"`
+Build and execute the tool with the command : `cargo run -- "<input>"`  
+The `<input>` value must be a valid *man* synopsis.
+
+Example : `cargo run -- "cp [OPTION]... [-T] SOURCE DEST"`
 
 ## Todo
 - [x] First minimal working version (learn Rust strucutre, tests, ...)  

@@ -11,12 +11,14 @@ VScode extensions :
 - CodeLLDB
 
 ## Build & Execute
-Build and execute the tool with the command : `cargo run -- "<input>"`  
-The `<input>` value must be a valid *man* synopsis.
+Build and execute with cargo : `cargo run -- <args>`  
+Example : `cargo run -- -i "cp [OPTION]... [-T] SOURCE DEST"`
 
-Example : `cargo run -- "cp [OPTION]... [-T] SOURCE DEST"`
+Run the tool manually (must be built first) : `./regexor <args>`  
+Example : `./regexor -i "cp [OPTION]... [-T] SOURCE DEST"`
 
 ## Todo
 - [x] First minimal working version (learn Rust strucutre, tests, ...)  
 - [ ] handle more complex token (repeatable args, choice delimiter, ...)  
+- [ ] interactive mode ?
 - [ ] add other definitions (postgreSql)  

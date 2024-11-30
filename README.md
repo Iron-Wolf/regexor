@@ -22,3 +22,4 @@ Example : `./regexor -i "cp [OPTION]... [-T] SOURCE DEST"`
 - [ ] handle more complex token (repeatable args, choice delimiter, ...)  
 - [ ] interactive mode ?
 - [ ] add other definitions (postgreSql)  
+- [ ] check [dependencies](https://linuxfr.org/users/jeanas/journaux/mon-inquietude-sur-les-dependances-en-rust)

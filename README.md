@@ -6,9 +6,12 @@ Convert help/man texts into their regex counterpart. The translation is used to 
 Rust :
 - `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
-VScode extensions : 
+VSCode extensions : 
 - rust-analyzer
 - CodeLLDB
+
+VSCode extensions (optional) : 
+- [https://marketplace.visualstudio.com/items?itemName=wcrichton.flowistry](flowistry)
 
 ## Build & Execute
 Build and execute with cargo : `cargo run -- <args>`  

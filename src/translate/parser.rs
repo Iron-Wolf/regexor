@@ -1,6 +1,6 @@
 use super::token::Token;
 
-/// Split a usage string into tokens. 
+/// Split a usage string into tokens.\
 /// The `[ ... ]` groups are parsed recursively.
 pub fn parse(usage: &str) -> Vec<Token> {
     split_usage(usage)

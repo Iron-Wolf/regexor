@@ -1,6 +1,6 @@
 //! Library-level tests: exercise the public `translate` API directly.
 
-use regexor::{Error, Format, translate};
+use regexor::{translate, Error, Format};
 
 #[test]
 fn translates_man_usage_strings() {

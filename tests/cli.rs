@@ -21,4 +21,3 @@ fn prints_the_translated_regex_and_exits_zero() {
 fn rejects_a_missing_input_argument() {
     regexor().assert().failure().stderr(contains("--input"));
 }
-

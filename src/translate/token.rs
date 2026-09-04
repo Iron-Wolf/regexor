@@ -7,4 +7,3 @@ pub enum Token {
     /// Bare word — literal text, or an UPPERCASE placeholder.
     Text(String),
 }
-

@@ -2,8 +2,24 @@
 name = "regexor"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+rust-version = "1.98"
+description = "Convert help / usage / man texts into a regex that validates command-line inputs"
+repository = "https://github.com/Iron-Wolf/regexor"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["regex", "cli", "usage", "man", "validation"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }
+
+[dev-dependencies]
+assert_cmd = "2"
+predicates = "3"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = "warn"

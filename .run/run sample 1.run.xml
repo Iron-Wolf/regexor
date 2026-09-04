@@ -1,5 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="run sample 1" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+    <option name="buildProfileId" value="dev" />
     <option name="command" value="run -- -i &quot;cp [OPTION]... [-T] SOURCE DEST&quot;" />
     <option name="workingDirectory" value="file://$PROJECT_DIR$" />
     <envs />

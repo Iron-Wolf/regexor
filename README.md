@@ -11,7 +11,7 @@ VSCode extensions :
 - CodeLLDB
 
 VSCode extensions (optional) : 
-- [https://marketplace.visualstudio.com/items?itemName=wcrichton.flowistry](flowistry)
+- [flowistry](https://marketplace.visualstudio.com/items?itemName=wcrichton.flowistry)
 
 ## Build & Execute
 Build and execute with cargo : `cargo run -- <args>`  

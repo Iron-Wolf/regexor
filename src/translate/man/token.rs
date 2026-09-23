@@ -1,4 +1,5 @@
 /// One lexical unit of a usage string.
+#[derive(Debug, PartialEq)]
 pub enum Token {
     /// `[ ... ]` — optional group, holding the tokens parsed from inside it.
     Optional(Vec<Token>),

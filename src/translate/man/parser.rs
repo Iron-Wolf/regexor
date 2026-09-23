@@ -30,6 +30,7 @@ fn split_usage(usage: &str) -> Vec<String> {
     for word in usage.split(' ') {
         if word.ends_with(']') || word.ends_with("...") {
             group.push_str(word);
+            // Move `group` into `parts` and reset it with the default value
             parts.push(std::mem::take(&mut group));
         } else if word.starts_with('[') {
             group.push_str(word);
@@ -51,4 +52,35 @@ fn remove_first_and_last(value: &str) -> &str {
     chars.next();
     chars.next_back();
     chars.as_str()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn parse_splits_flags_and_optional_groups() {
+        let tokens = parse("ftp [-pinegvd] [HOST]");
+
+        assert_eq!(
+            tokens,
+            vec![
+                Token::Text("ftp".to_string()),
+                Token::Optional(vec![Token::Flags("pinegvd".to_string())]),
+                Token::Optional(vec![Token::Text("HOST".to_string())]),
+            ]
+        );
+    }
+
+    #[test]
+    fn split_usage_keeps_bracketed_group_together() {
+        let parts = split_usage("cmd [-o OUTPUT]");
+
+        assert_eq!(parts, vec!["cmd", "[-o OUTPUT]"]);
+    }
+
+    #[test]
+    fn remove_first_and_last_strips_surrounding_brackets() {
+        assert_eq!(remove_first_and_last("[HOST]"), "HOST");
+    }
 }

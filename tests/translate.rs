@@ -1,4 +1,5 @@
-//! Library-level tests: exercise the public `translate` API directly.
+//! public function tests: access function that are
+//! available outside the crate
 
 use regexor::{translate, Error, Format};
 
@@ -16,7 +17,8 @@ fn translates_man_usage_strings() {
     ];
 
     for (input, expected) in cases {
-        assert_eq!(translate(input, Format::Man).unwrap(), expected);
+        let result = translate(input, Format::Man).expect("should always succeed");
+        assert_eq!(result, expected);
     }
 }
 

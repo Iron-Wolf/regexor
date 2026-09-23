@@ -2,10 +2,7 @@ use clap::Parser;
 
 use super::format::Format;
 
-/// A regex validator, made with Rust.
-///
-/// Convert help/man texts into their regex counterpart. The translation is
-/// used to validate command-line inputs.
+/// The command line arguments accepted by the `regexor` binary.
 #[derive(Parser, Debug)]
 #[command(version, about)]
 pub struct Cli {
